@@ -1,0 +1,528 @@
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$title-size: 1.4rem;
+$text: 'Roboto', sans-serif;
+$text-size: 0.9rem;
+$background-color: rgb(243, 240, 240);
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: $text;
+    font-size: $text-size;
+}
+
+.btn_menu {
+    margin: 2rem auto;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 10px 0 grey;
+    color: white;
+    background: linear-gradient(to left top, $primary-color, $secondary-color,);
+    text-align: center;
+    width: min-content;
+    white-space: nowrap;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.9;
+        box-shadow: 2px 2px 10px 2px grey;
+    }
+}
+
+header {
+margin-top: 20px;
+text-align: center;
+margin-bottom: 0.5rem;
+    .logo_header {
+        width: 40%;
+    }
+    #title,h2,h3,h4,h5 {
+        font-size: $title-size;
+    }
+    .search_icon {
+        background: rgb(233, 230, 230);
+        padding: 15px 0;
+        margin-bottom: 0;
+        border-top: 3px solid lightgray;
+    }
+    .icon_search {
+        padding-right: 12px;
+    }
+    .nav_content {
+        background: $background-color;
+        padding: 20px;
+    }
+    #title {
+        margin: 0 15px;
+    }
+    .light {
+        color: grey;
+        margin-top: 1rem;
+    }
+    .back_link {
+        margin-left: 2rem;
+        position: absolute;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: black;
+        font-size: 1.5rem;
+        
+      }
+}
+main {
+position: relative;
+}
+footer {
+background-color: black;
+opacity: 0.8;
+color: white;
+margin: 0;
+
+img {
+    width: 30%;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+ul {
+    list-style: none;
+    text-decoration: none;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    margin-left: -18px;
+}
+li {
+    padding: 5px 0;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+}
+i {
+    padding-right: 5px;
+    
+}
+.fa-handshake {
+    transform: rotate(-45deg);
+    font-size: 0.6rem;
+}
+}
+/***********ACCUEIL*********/
+.loading {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: white;
+    animation: hideLoader 0.5s forwards;
+    animation-delay: 3000ms;
+    }
+ 
+.loading::after {
+    content : "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 120px;
+    height: 120px;
+    margin: 0;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid $secondary-color;
+    border-left: 16px solid $primary-color;
+    border-right: 16px solid $tertiary-color; 
+    transform: translate(-50%,-50%);
+    animation: spin 2s linear infinite;
+    }
+ 
+    @keyframes hideLoader
+    {
+      100%
+      {
+        visibility: hidden;
+      }
+    }
+ 
+    @keyframes spin
+    {
+      100%
+      {
+        transform: translate(-50%,-50%) rotate(360deg);
+      }
+    }
+
+#fonction {
+    display: flex;
+    flex-direction: column;
+        .container {
+            margin: 30px 20px;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            margin-left: -30px;
+        }
+        li {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $background-color;
+            border-radius: 1.2rem;
+            box-shadow: 2px 2px 10px 0 grey;
+            padding: 10px 30px 10px 0;
+            margin: 15px 0;
+        }
+        .number_background {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: $primary-color;
+            border-radius: 10rem;
+            padding: 3px 8px;
+            margin-left: -12px; 
+        }
+        .fas {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .fa-mobile-alt {
+            font-size: 1.3rem;
+            color:grey;
+        }
+        .fa-bars {
+            font-size: 1.2rem;
+            color: grey;
+        }
+        .fa-store {
+            font-size: 1rem;
+            color: $primary-color;
+        }
+        p {
+            display: flex;
+            width: 70%;
+            height: 3rem;
+            font-weight: bold;
+            font-size: 0.8rem;
+            align-items: center;
+            
+        }
+        @media (min-width: 600px){
+              ul {
+                  display: flex;
+                  flex-direction: row;
+                  flex-wrap: wrap;
+                  justify-content: space-between;
+              }
+              li {
+                width: 45%;
+              }  
+        }
+        @media (min-width: 900px){
+            ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+            li {
+                width: 30%;
+            }
+}
+}
+#restaurant {
+    display: flex;
+    flex-direction: column;
+    background-color: $background-color;
+        .container {
+            margin: 30px 20px;
+    }
+    .img_restaurant {
+        width: 100%;
+        height: 180px;
+        border-radius: 15px;
+        object-fit: cover;
+    }
+    .new {
+        background-color: #99E2D0;
+        color: lightseagreen;
+        font-size: 0.8rem;
+        position: absolute;
+        padding: 5px 10px;
+        right: 2.5rem;
+        margin-bottom: 7rem;
+    }
+    .article_vignette {
+        background-color: white;
+        margin: 15px 0;
+        border-radius: 1rem;
+    }
+    .bloc {
+        margin-left: 15px;
+        padding-bottom: 8px;
+    }
+    .heart {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+    h3 {
+        margin-bottom: 5px;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: black;
+        position: relative;
+    }
+    i {
+        display: flex;
+        font-size: 1.4rem;
+        font-weight: lighter;
+        margin-right: 20px;
+    }
+    
+    input[type=checkbox] {
+        display: none;
+    }
+    .fa-heart {
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    input[type=checkbox]:checked + .like {
+        font-weight: 900;
+        color: $primary-color;
+        transition: width 2s, height 2s, color 0.5s;
+    }
+    p {
+        margin-top: 0;
+        font-weight: 300;
+    }
+    @media (min-width: 600px){
+        .vignette {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .article_vignette {
+            width: 49%;
+        }
+    }
+    @media (min-width: 900px){
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+        .article_vignette {
+            width: 24%;
+        }
+}
+}
+
+
+
+/***********MENU************/
+.menu_restaurant_image {
+    object-fit: cover;
+    width: 100%;
+    height: 18rem;
+  }
+  
+  #menu_all {
+    width: 100%;
+    border-radius: 3rem 3rem 0 0;
+    background: $background-color;
+    padding: 1.5rem;
+    position: relative;
+    margin-top: -4rem;
+
+  .menu_header {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .menu_restaurant_title {
+    font-family: "Shrikhand", cursive;
+    font-size: $title-size;
+  }
+  .menu_list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .menu_category_title {
+    font-size: $title-size;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    position: relative;
+  }
+  .menu_category_title::after {
+    content: "";
+    width: 5rem;
+    height: 0.5rem;
+    background-color: #99e2d0;
+    position: absolute;
+    bottom: -1.5rem;
+    left: 0;
+  }
+  
+  .menu_item {
+    background: white;
+    border-radius: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: flex;
+    animation: slideup 3s forwards;
+    opacity: 0;
+    margin: 0.5rem 0;
+  }
+  .menu_info {
+    padding: 0.8rem;
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: $text-size;
+  }
+  .menu_title {
+    font-size: 1.1rem;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-bottom: 0.2rem;
+  }
+  .menu_details {
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .menu_price {
+    font-weight: 600;
+    display: flex;
+    align-items: flex-end;
+  }
+  .menu_selection {
+    background: #99e2d0;
+    cursor: pointer;
+    height: auto;
+    width: 0;
+    opacity: 0;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out, 0.5s ease-in-out;
+  }
+  .check_icon {
+    font-size: 2rem;
+    color: white;
+    transform: rotate(360deg);
+    transition: 0.5s ease-in-out;
+  }
+  .menu_item:hover .menu_selection {
+    opacity: 100%;
+    width: 4rem;
+  }
+  .menu_item:hover .check_icon {
+    transform: rotate(0deg);
+  }
+  i {
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: lighter;
+    
+}
+  input[type=checkbox] {
+    display: none;
+}
+.fa-heart {
+    display: inline-block;
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked + .like {
+    font-weight: 900;
+    color: $primary-color;
+    transition: width 2s, height 2s, color 0.5s;
+}
+  
+  @media (min-width: 600px) {
+    .menu_restaurant_image {
+      min-height: 40rem;
+    }
+  
+    .menu_restaurant_title {
+      font-size: 3.5rem;
+    }
+  
+    .menu_header {
+      justify-content: center;
+    }
+  
+    .menu_wrapper {
+      padding: 4rem;
+      border-radius: 0;
+    }
+  
+    
+}
+      @keyframes slideup {
+        from {
+          transform: translatey(20px);
+          opacity: 0%;
+        }
+        to {
+          transform: translatey(0px);
+          opacity: 100%;
+        }
+      }
+}
+
+
+@keyframes fadein {
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+  @keyframes fadeout {
+    from {
+      opacity: 100%;
+    }
+    to {
+      opacity: 0%;
+      visibility: hidden;
+    }
+  }
