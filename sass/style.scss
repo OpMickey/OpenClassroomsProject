@@ -34,9 +34,9 @@ body {
 }
 
 header {
-margin-top: 20px;
 text-align: center;
-margin-bottom: 0.5rem;
+margin-bottom: 1rem;
+margin-top: 1rem;
     .logo_header {
         width: 40%;
     }
@@ -64,16 +64,16 @@ margin-bottom: 0.5rem;
         margin-top: 1rem;
     }
     .back_link {
+        padding-top: 0.5rem;
         margin-left: 2rem;
         position: absolute;
         cursor: pointer;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         text-decoration: none;
         color: black;
-        font-size: 1.5rem;
-        
+        font-size: 1.2rem;
       }
 }
 main {
@@ -84,7 +84,7 @@ background-color: black;
 opacity: 0.8;
 color: white;
 margin: 0;
-
+width: 100%;
 img {
     width: 30%;
     margin-left: 20px;
@@ -113,7 +113,13 @@ i {
     transform: rotate(-45deg);
     font-size: 0.6rem;
 }
+@media (min-width: 600px){
+    img {
+        width: 20%;
+    }
 }
+}
+
 /***********ACCUEIL*********/
 .loading {
     display: block;
@@ -339,8 +345,6 @@ i {
 }
 }
 
-
-
 /***********MENU************/
 .menu_restaurant_image {
     object-fit: cover;
@@ -361,12 +365,13 @@ i {
     margin-bottom: 2rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    
   }
   
   .menu_restaurant_title {
     font-family: "Shrikhand", cursive;
     font-size: $title-size;
+    padding-right: 1rem;
   }
   .menu_list {
     display: flex;
@@ -474,28 +479,8 @@ input[type=checkbox]:checked + .like {
     font-weight: 900;
     color: $primary-color;
     transition: width 2s, height 2s, color 0.5s;
-}
-  
-  @media (min-width: 600px) {
-    .menu_restaurant_image {
-      min-height: 40rem;
-    }
-  
-    .menu_restaurant_title {
-      font-size: 3.5rem;
-    }
-  
-    .menu_header {
-      justify-content: center;
-    }
-  
-    .menu_wrapper {
-      padding: 4rem;
-      border-radius: 0;
-    }
-  
-    
-}
+}  
+
       @keyframes slideup {
         from {
           transform: translatey(20px);
@@ -506,23 +491,40 @@ input[type=checkbox]:checked + .like {
           opacity: 100%;
         }
       }
+      @media (min-width: 600px) {
+          .menu_header {
+              display: flex;
+              justify-content: center;
+          }
+          .menu_restaurant_title {
+            padding-right: 1rem;
+            font-size: 2rem;
+            
+          }
+          .menu_category_title {
+            width: 100%;
+          }
+          .menu_list {
+              width: 100%;
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              align-items: center;
+              
+          }
+          .menu_item {
+              display: flex;
+              flex-direction: row;
+             width: 49%;
+          }
+          
+          
+          
 }
-
-
-@keyframes fadein {
-    from {
-      opacity: 0%;
-    }
-    to {
-      opacity: 100%;
-    }
-  }
-  @keyframes fadeout {
-    from {
-      opacity: 100%;
-    }
-    to {
-      opacity: 0%;
-      visibility: hidden;
-    }
+    @media (min-width: 900px) {
+        .menu_restaurant_title {
+            font-size: 2.5rem;
+}
+}
   }
