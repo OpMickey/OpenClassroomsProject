@@ -469,17 +469,17 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        font-size: $text-size;
         overflow: hidden;
         white-space: nowrap;
-        font-size: $text-size;
     }
 
     .menu_title {
         font-size: 1.1rem;
         font-weight: 400;
+        padding-bottom: 0.2rem;
         overflow: hidden;
         text-overflow: ellipsis;
-        padding-bottom: 0.2rem;
     }
 
     .menu_details {
@@ -527,7 +527,6 @@ footer {
         display: flex;
         font-size: 1.4rem;
         font-weight: lighter;
-
     }
 
     input[type=checkbox] {
@@ -592,6 +591,18 @@ footer {
     @media (min-width: 900px) {
         .menu_restaurant_title {
             font-size: 2.5rem;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .menu_item:hover .menu_title {
+            white-space: normal;
+        }
+    }
+
+    @media (min-width: 600px) and (max-width: 680px) {
+        .menu_item:hover .menu_title {
+            white-space: normal;
         }
     }
 }

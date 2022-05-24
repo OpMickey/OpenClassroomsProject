@@ -403,16 +403,16 @@ footer .fa-handshake {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-size: 0.9rem;
   overflow: hidden;
   white-space: nowrap;
-  font-size: 0.9rem;
 }
 #menu_all .menu_title {
   font-size: 1.1rem;
   font-weight: 400;
+  padding-bottom: 0.2rem;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding-bottom: 0.2rem;
 }
 #menu_all .menu_details {
   font-weight: 300;
@@ -505,6 +505,16 @@ footer .fa-handshake {
 @media (min-width: 900px) {
   #menu_all .menu_restaurant_title {
     font-size: 2.5rem;
+  }
+}
+@media (max-width: 360px) {
+  #menu_all .menu_item:hover .menu_title {
+    white-space: normal;
+  }
+}
+@media (min-width: 600px) and (max-width: 680px) {
+  #menu_all .menu_item:hover .menu_title {
+    white-space: normal;
   }
 }
 
